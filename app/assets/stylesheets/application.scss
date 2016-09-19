@@ -1,0 +1,401 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text);
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white !important;
+}
+
+.navbar-default {
+  background-color: #86b300;
+  cursor: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.navbar-default .navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  color: white !important;
+  padding-left: 30px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  padding: 20px 20px;
+  line-height: 10px;
+  text-transform: uppercase;
+  cursor: auto;
+  color: white !important;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  text-decoration: underline;
+}
+
+.navbar-default .navbar-nav {
+  text-transform: uppercase;
+  font-family: 'Lato', serif;
+  color: white;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color:rgba(50, 75, 150, .20);
+}
+
+.divider {
+  background-color: #00a6c2;
+  max-width: 100%;
+}
+
+h5.footer {
+  color: #fff;
+  font-family: 'Lato';
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  margin: auto;
+}
+
+.global-footer {
+  background-color: #2D3051;
+  color: #393939;
+  line-height: 18px;
+  overflow: hidden;
+  margin-top: 60px;
+  padding: 20px;
+  text-align: center;
+}
+
+.image {
+  width: 250px;
+  float: left;
+  margin: 20px;
+}
+
+body {
+  font-size: small;
+  line-height: 1.4;
+}
+p {
+  margin: 0;
+}
+
+.performance-facts {
+  border: 1px solid black;
+  margin: 20px;
+  float: left;
+  width: 280px;
+  padding: 0.5rem;
+  table {
+    border-collapse: collapse;
+  }
+}
+.performance-facts__title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0 0 0.25rem 0;
+}
+.performance-facts__header {
+  border-bottom: 10px solid black;
+  padding: 0 0 0.25rem 0;
+  margin: 0 0 0.5rem 0;
+  p {
+    margin: 0;
+  }
+}
+.performance-facts__table {
+  width: 100%;
+  thead tr {
+    th, td {
+      border: 0;
+    }
+  }
+  th, td {
+    font-weight: normal;
+    text-align: left;
+    padding: 0.25rem 0;
+    border-top: 1px solid black;
+    white-space: nowrap;
+  }
+  td {
+    &:last-child {
+      text-align: right;
+    }
+  }
+  .blank-cell {
+    width: 1rem;
+    border-top: 0;
+  }
+  .thick-row {
+    th, td {
+      border-top-width: 5px;
+    }
+  }
+}
+.small-info {
+  font-size: 0.7rem;
+}
+
+.performance-facts__table--small {
+  @extend .performance-facts__table;
+  border-bottom: 1px solid #999;
+  margin: 0 0 0.5rem 0;
+  thead {
+    tr {
+      border-bottom: 1px solid black;
+    }
+  }
+  td {
+    &:last-child {
+      text-align: left;
+    }
+  }
+  th, td {
+    border: 0;
+    padding: 0;
+  }
+}
+
+.performance-facts__table--grid {
+  @extend .performance-facts__table;
+  margin: 0 0 0.5rem 0;
+  td {
+    &:last-child {
+      text-align: left;
+      &::before {
+        content: "•";
+        font-weight: bold;
+        margin: 0 0.25rem 0 0;
+      }
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+.thick-end {
+  border-bottom: 10px solid black;
+}
+.thin-end {
+  border-bottom: 1px solid black;
+}
+
+// HOMEPAGE
+
+.page-title, .search-title {
+    margin-bottom: 32px;
+}
+
+.page-title, .search-title, .block--blurb .block__title, .block--post .block__title {
+    font-size: 26px;
+    line-height: 31px;
+    font-weight: 300;
+    color: #32373b;
+}
+
+.container, .page-header__inner, .page-footer__inner, .section--default, .page-subheader__container, .page-content, .page-subheader--search .page-subheader__container, .page-content--narrow, .page-content--single, .page-main__inner, .features, .section--more, .section--hero {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.page-subheader__inner {
+    background-image: url(https://www.cdn.whatsapp.net/img/v4/bg-subheader-clouds.jpg?v=f12ccb3);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 368px;
+}
+
+.page-subheader--search .page-subheader__container {
+    text-align: center;
+}
+
+.page-subheader__container {
+    box-sizing: border-box;
+}
+
+.search--subheader .search__input {
+    font-size: 22px;
+    padding: 12px 20px 14px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 788px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.85);
+}
+
+.search__input {
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    border: 1px solid transparent;
+}
+
+input:not([type="image" i]), textarea {
+    box-sizing: border-box;
+}
+
+.page-subheader__container {
+    padding-top: 54px;
+    color: #27b8a2;
+}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: -apple-system, "Segoe UI", Roboto, Oxygen, "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: #fff;
+    color: #282828;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-smooth: always;
+    position: relative;
+}
+
+div {
+    display: block;
+}
+
+// HOMEPAGE BOTTOM
+
+.wrapper {
+  height: 420px;
+  width: 654px;
+  margin: 50px auto;
+  border-radius: 7px 7px 7px 7px;
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+
+.product-img {
+  float: left;
+  height: 420px;
+  width: 327px;
+  border-radius: 7px 0 0 7px;
+}
+
+.product-info {
+  float: left;
+  height: 420px;
+  width: 327px;
+  border-radius: 0 7px 7px 0;
+  background-color: #ffffff;
+}
+
+.product-text {
+  height: 300px;
+  width: 327px;
+}
+
+.product-text h1 {
+  margin: 0 0 0 38px;
+  padding-top: 52px;
+  font-size: 34px;
+  color: #474747;
+}
+
+.product-text h1,
+.product-price-btn p {
+  font-family: 'Bentham', serif;
+}
+
+.product-text h2 {
+  margin: 0 0 0 38px;
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #d9d9d9;
+  letter-spacing: 0.2em;
+}
+
+.product-text p {
+  height: 125px;
+  margin: 0 0 0 38px;
+  font-family: 'Playfair Display', serif;
+  color: #8d8d8d;
+  line-height: 1.7em;
+  font-size: 15px;
+  font-weight: lighter;
+  overflow: hidden;
+}
+
+.product-price-btn {
+  height: 103px;
+  width: 327px;
+  margin-top: 17px;
+  position: relative;
+}
+
+.product-price-btn p {
+  display: inline-block;
+  position: absolute;
+  top: -13px;
+  height: 50px;
+  font-family: 'Trocchi', serif;
+  margin: 0 0 0 38px;
+  font-size: 28px;
+  font-weight: lighter;
+  color: #474747;
+}
+
+span {
+  display: inline-block;
+  height: 50px;
+  font-family: 'Suranna', serif;
+  font-size: 34px;
+}
+
+.product-price-btn button {
+  float: right;
+  display: inline-block;
+  height: 50px;
+  width: 176px;
+  margin: 0 40px 0 16px;
+  box-sizing: border-box;
+  border: transparent;
+  border-radius: 60px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  background-color: #9cebd5;
+  cursor: pointer;
+  outline: none;
+}
+
+.product-price-btn button:hover {
+  background-color: #79b0a1;
+}
