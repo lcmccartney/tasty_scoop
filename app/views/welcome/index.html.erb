@@ -6,30 +6,11 @@
                   <div class="search search--subheader">
                     <%= form_tag :search, method: :get, class: "query search__input" do %>
                       <div class="form-group">
-                        <%= text_field_tag "search", 'Search for food item eg. " large apple"', :onclick => 'if($(this).val()=="Search"){$(this).val("");};', class: "query search__input" %>
-                      </div>
+                          <%= text_field_tag "search", nil, placeholder: 'e.g. 1 apple', :onclick => 'if($(this).val()=="Enter search term..."){$(this).val("");};', class: "form-control" %>                      </div>
                         <%= submit_tag "Search", class: "btn btn-success" %>
                     <% end %>
                   </div>
               </div>
           </div>
       </div>
-
-        <div class="wrapper">
-          <div class="product-img">
-            <img src="http://goo.gl/lKWSbq" height="420" width="327">
-          </div>
-          <div class="product-info">
-            <div class="product-text">
-              <h1>Carrot</h1>
-              <h2>for your vision</h2>
-              <p>Vegetables are cool</p>
-            </div>
-            <div class="product-price-btn">
-              <p><span>78</span>$</p>
-              <button>favorite</button>
-            </div>
-          </div>
-        </div>
-
 </body>

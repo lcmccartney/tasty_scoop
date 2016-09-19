@@ -9,13 +9,13 @@ class Food < OpenStruct
 
   def initialize(search)
     data = EdamamService.new.data(search)
-    @calories        = data['calories'] #kv
-    @total_weight    = data['totalWeight'] #kv
-    @diet_labels     = data['dietLabels'] #array
-    @health_labels   = data['healthLabels'] #array
-    @total_nutrients = data['totalNutrients'] #nested_hash
-    @total_daily     = data['totalDaily'] #nested_hash
-    @ingredients     = data['ingredients'] #hash_w_array
+    @calories        = data['calories']
+    @total_weight    = data['totalWeight']
+    @diet_labels     = data['dietLabels']
+    @health_labels   = data['healthLabels']
+    @total_nutrients = data['totalNutrients']
+    @total_daily     = data['totalDaily']
+    @ingredients     = data['ingredients']
   end
 
   def search_term
@@ -41,12 +41,15 @@ class Food < OpenStruct
 
   def total_nutrients
     list = @total_nutrients.map do |k,v|
-      "#{v["label"]}: #{v["quantity"]} #{v["unit"]}"
+      "#{v["label"]}: #{v["quantity"].round(2)} #{v["unit"]}"
     end
     list
   end
 
-  def 
-
+  def total_daily
+    list = @total_daily.map do |k,v|
+      "#{v["label"]}: #{v["quantity"].round(2)} #{v["unit"]}"
+    end
+    list
   end
 end

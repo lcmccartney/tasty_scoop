@@ -1,9 +1,9 @@
 <div class="wrapper">
-  <!-- <div class="product-img">
-    <img src="http://goo.gl/lKWSbq" height="420" width="327">
+  <!-- <div class="food-img">
+    <img src="" height="420" width="327">
   </div> -->
-  <div class="product-info">
-    <div class="product-text">
+  <div class="food-info">
+    <div class="food-text">
       <h1><%= @food.search_term %></h1>
       <% @food.diet_labels.each do |label| %>
       <h2><%= label %></h2>
@@ -19,9 +19,10 @@
       <% @food.health_labels.each do |label| %>
         <h2><%= label %></h2>
       <% end %>
+      <br><br>
     </div>
 
-    <!-- <div class="product-price-btn">
+    <!-- <div class="food-fav-btn">
       <p><span>78</span>$</p>
       <button>favorite</button>
     </div> -->
